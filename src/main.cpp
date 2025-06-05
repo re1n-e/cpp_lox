@@ -1,6 +1,8 @@
 #include <iostream>
-#include <common.hpp>
-#include <chunk.hpp>
+#include "common.hpp"
+#include "chunk.hpp"
+
+// g++ -I./include src/*.cpp -o cpp_lox
 
 int main()
 {

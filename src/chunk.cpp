@@ -1,21 +1,17 @@
-#include "common.hpp"
+#include "chunk.hpp"
+#include <vector>
 
-class Chunk
+Chunk::Chunk()
 {
-    std::vector<uint8_t> code;
+    this->code = {0};
+}
 
-public:
-    Chunk()
-    {
-        this->code = {0};
-    }
+void Chunk::writeChunk(uint8_t byte)
+{
+    this->code.push_back(byte);
+}
 
-    void writeChunk(uint8_t byte)
-    {
-        this->code.push_back(byte);
-    }
-
-    ~Chunk()
-    {
-    }
-};
+Chunk::~Chunk()
+{
+    // Optional cleanup
+}
